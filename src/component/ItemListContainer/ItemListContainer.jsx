@@ -1,11 +1,3 @@
-// export default function ItemListContainer (props){
-
-//     return (
-//         <div className="greetings"> 
-//             <h2>{props.title}</h2>
-//         </div>
-//     )
-// }
 
 import Item from '../Item/Item';
 import getMockAPIData, { getProductsByCateg } from '../../Data/mockAPI';

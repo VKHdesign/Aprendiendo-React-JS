@@ -2,6 +2,8 @@ import StateComponent from "../ColorPick/StateComponent"
 import { useParams } from "react-router"
 import { getProductById } from "../../Data/mockAPI";
 import { useEffect, useState } from "react";
+
+
 function ItemDetailContainer() {
     const { idParam } = useParams();
     const [product, setProduct] = useState({ loading: true });

@@ -28,20 +28,31 @@ body {
     align-items: center;
 }
 
+.logo a {
+    text-decoration: none;
+}
+
+.logo a::first-letter {
+    color: #31a54e;
+}
+
 .logo img {
     height: 40px;
     margin-right: 10px;
 }
 
 .logo-text {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
-    color: #a00f0f;
+    color: #ba2929;
 }
 
-.logo-text::first-letter {
-    color: #31a54e;
+
+
+.logo-text a {
+    list-style: none;
 }
+
 
 /* Menú derecho */
 .nav-right {
@@ -52,56 +63,32 @@ body {
 }
 
 /* Dropdowns */
-.dropdown {
+.button {
     position: relative;
     display: inline-block;
 }
 
-.dropdown-btn {
-    background-color: transparent;
+
+.btn {
     border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    color: #31a54e;
+    padding: 5px 12px;
+    font-size: 13px;
+    color: white;
+    background-color: #49a560;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.dropdown-btn:hover {
-    background-color: #f0f0f0;
+.btn:hover {
+    background-color:#434a51;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: white;
-    min-width: 180px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    z-index: 1;
-}
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
 
 /* Carrito */
 .cart-btn {
-    background-color: #49a560;
+    background-color: #0056b3;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -113,7 +100,7 @@ body {
 }
 
 .cart-btn:hover {
-    background-color: #0056b3;
+    background-color: #434a51;
 }
 
 .cart-count {
@@ -132,12 +119,10 @@ body {
     font-weight: bold;
 }
 
-.greetings h2 {
-    padding-top: 10px;
-    display: flex;
-    color: #a00f0f;
-    justify-content: center;
+.item-list-container h4 {
+    padding-bottom: 12px;;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -152,7 +137,7 @@ body {
         gap: 10px;
     }
 
-    .dropdown-btn {
+    .Button-btn {
         font-size: 14px;
         padding: 8px 12px;
     }
