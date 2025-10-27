@@ -2,7 +2,7 @@ const products = [
     // Guitarras eléctricas
     {
         id: 1,
-        nombre: "Fender Stratocaster",
+        title: "Fender Stratocaster",
         category: "Guitarra Eléctrica",
         price: 1200,
         marca: "Fender",
@@ -12,7 +12,7 @@ const products = [
     },
     {
         id: 2,
-        nombre: "Gibson Les Paul Standard",
+        title: "Gibson Les Paul Standard",
         category: "Guitarra Eléctrica",
         price: 1800,
         marca: "Gibson",
@@ -22,7 +22,7 @@ const products = [
     },
     {
         id: 3,
-        nombre: "Ibanez RG550",
+        title: "Ibanez RG550",
         category: "Guitarra Eléctrica",
         price: 950,
         marca: "Ibanez",
@@ -32,7 +32,7 @@ const products = [
     },
     {
         id: 4,
-        nombre: "Fender Telecaster",
+        title: "Fender Telecaster",
         category: "Guitarra Eléctrica",
         price: 1100,
         marca: "Fender",
@@ -42,7 +42,7 @@ const products = [
     },
     {
         id: 5,
-        nombre: "PRS SE Custom 24",
+        title: "PRS SE Custom 24",
         category: "Guitarra Eléctrica",
         price: 900,
         marca: "PRS",
@@ -52,7 +52,7 @@ const products = [
     },
     {
         id: 6,
-        nombre: "Epiphone SG Standard",
+        title: "Epiphone SG Standard",
         category: "Guitarra Eléctrica",
         price: 650,
         marca: "Epiphone",
@@ -62,7 +62,7 @@ const products = [
     },
     {
         id: 7,
-        nombre: "Jackson Dinky JS22",
+        title: "Jackson Dinky JS22",
         category: "Guitarra Eléctrica",
         price: 400,
         marca: "Jackson",
@@ -87,7 +87,7 @@ const products = [
         price: 350,
         marca: "Yamaha",
         stock: 15,
-        description: "Excelente relación calidad-price, ideal para principiantes y avanzados.",
+        description: "Excelente relación precio-calidad, ideal para principiantes y avanzados.",
         imgURL: "https://placehold.co/300x200/white/black?text=Pacifica+112V"
     },
     {
@@ -233,7 +233,7 @@ const products = [
     },
     {
         id: 24,
-        nombre: "Gibson Thunderbird",
+        title: "Gibson Thunderbird",
         category: "Bajo Eléctrico",
         price: 1400,
         marca: "Gibson",
@@ -243,7 +243,7 @@ const products = [
     },
     {
         id: 25,
-        nombre: "Ibanez SR300E",
+        title: "Ibanez SR300E",
         category: "Bajo Eléctrico",
         price: 500,
         marca: "Ibanez",
@@ -253,7 +253,7 @@ const products = [
     },
     {
         id: 26,
-        nombre: "Yamaha BB434",
+        title: "Yamaha BB434",
         category: "Bajo Eléctrico",
         price: 600,
         marca: "Yamaha",
@@ -263,7 +263,7 @@ const products = [
     },
     {
         id: 27,
-        nombre: "Yamaha TRBX304",
+        title: "Yamaha TRBX304",
         category: "Bajo Eléctrico",
         price: 550,
         marca: "Yamaha",
@@ -273,7 +273,7 @@ const products = [
     },
     {
         id: 28,
-        nombre: "Fender Dimension Bass",
+        title: "Fender Dimension Bass",
         category: "Bajo Eléctrico",
         price: 1200,
         marca: "Fender",
@@ -283,7 +283,7 @@ const products = [
     },
     {
         id: 29,
-        nombre: "Ibanez Talman TMB100",
+        title: "Ibanez Talman TMB100",
         category: "Bajo Eléctrico",
         price: 400,
         marca: "Ibanez",
@@ -293,7 +293,7 @@ const products = [
     },
     {
         id: 30,
-        nombre: "Ibanez GSR200",
+        title: "Ibanez GSR200",
         category: "Bajo Eléctrico",
         price: 350,
         marca: "Ibanez",
@@ -303,7 +303,7 @@ const products = [
     },
     {
         id: 31,
-        nombre: "Fender Aerodyne Jazz Bass",
+        title: "Fender Aerodyne Jazz Bass",
         category: "Bajo Eléctrico",
         price: 1300,
         marca: "Fender",
@@ -313,27 +313,27 @@ const products = [
     },
     {
         id: 32,
-        nombre: "Squier Affinity Jazz Bass",
+        title: "Squier Affinity Jazz Bass",
         category: "Bajo Eléctrico",
         price: 300,
         marca: "Squier",
         stock: 18,
-        description: "Gran relación calidad-price, ideal para principiantes.",
+        description: "Gran relación precio-calidad, ideal para principiantes.",
         imgURL: "https://placehold.co/300x200/silver/black?text=Affinity+Jazz"
     },
     {
         id: 33,
-        nombre: "Squier Affinity Precision Bass",
+        title: "Squier Affinity Precision Bass",
         category: "Bajo Eléctrico",
         price: 320,
         marca: "Squier",
         stock: 17,
-        description: "Sonido clásico a un price accesible.",
+        description: "Sonido clásico a un precio accesible.",
         imgURL: "https://placehold.co/300x200/white/black?text=Affinity+Precision"
     },
     {
         id: 34,
-        nombre: "Warwick RockBass Corvette",
+        title: "Warwick RockBass Corvette",
         category: "Bajo Eléctrico",
         price: 900,
         marca: "Warwick",
@@ -343,7 +343,7 @@ const products = [
     },
     {
         id: 35,
-        nombre: "Cort Action Bass",
+        title: "Cort Action Bass",
         category: "Bajo Eléctrico",
         price: 350,
         marca: "Cort",
@@ -353,7 +353,7 @@ const products = [
     },
     {
         id: 36,
-        nombre: "ESP LTD B-10",
+        title: "ESP LTD B-10",
         category: "Bajo Eléctrico",
         price: 400,
         marca: "ESP",
@@ -363,7 +363,7 @@ const products = [
     },
     {
         id: 37,
-        nombre: "Ibanez SR500E",
+        title: "Ibanez SR500E",
         category: "Bajo Eléctrico",
         price: 800,
         marca: "Ibanez",
@@ -373,7 +373,7 @@ const products = [
     },
     {
         id: 38,
-        nombre: "Yamaha TRB1005J",
+        title: "Yamaha TRB1005J",
         category: "Bajo Eléctrico",
         price: 1500,
         marca: "Yamaha",
@@ -383,7 +383,7 @@ const products = [
     },
     {
         id: 39,
-        nombre: "Epiphone EB-0",
+        title: "Epiphone EB-0",
         category: "Bajo Eléctrico",
         price: 350,
         marca: "Epiphone",
@@ -393,7 +393,7 @@ const products = [
     },
     {
         id: 40,
-        nombre: "Gretsch G2220 Junior Jet",
+        title: "Gretsch G2220 Junior Jet",
         category: "Bajo Eléctrico",
         price: 450,
         marca: "Gretsch",

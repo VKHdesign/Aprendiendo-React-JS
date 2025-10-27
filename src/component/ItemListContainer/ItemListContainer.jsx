@@ -1,6 +1,6 @@
 
 import Item from '../Item/Item';
-import getMockAPIData, { getProductsByCateg } from '../../Data/mockAPI';
+import { getProducts, getProductsByCateg } from '../../data/firebase';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import './ItemListContainer.css';
@@ -20,7 +20,7 @@ export default function ItemListContainer(props) {
                 .finally(() => setIsLoading(false))
         }
         else {
-            getMockAPIData()
+            getProducts()
                 .then((productList) => {
                     console.log("Promesa terminada")
                     setProducts(productList);
@@ -40,7 +40,7 @@ export default function ItemListContainer(props) {
 
     return (
         <div className="item-list-container" >
-            <h2>{props.greeting}</h2>
+            <h2>{props.children}</h2>
             {isLoading
                 ? <p className="item-list-container__loading">Cargando...</p>
                 : ""
