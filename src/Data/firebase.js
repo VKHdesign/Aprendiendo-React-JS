@@ -1,0 +1,86 @@
+
+import { initializeApp } from "firebase/app";
+import { collection, doc, query, where, getDocs, getDoc, addDoc, getFirestore} from "firebase/firestore";
+import products from './products';
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDfkTFXNddYAuWoP9eqRiTyg7Tg_h4kTlM",
+    authDomain: "proyecto-reactjs-coder-c5a2e.firebaseapp.com",
+    projectId: "proyecto-reactjs-coder-c5a2e",
+    storageBucket: "proyecto-reactjs-coder-c5a2e.firebasestorage.app",
+    messagingSenderId: "110876696561",
+    appId: "1:110876696561:web:106adab13f2eccd744ee50"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app)
+
+
+export async function getProducts() {
+    const productsRef = collection(db, "products");
+
+    const productsSnapshot = await getDocs(productsRef);
+    // * getDocs(productsRef).then( productsSnapshot => ...)
+
+    //const document0 = productsSnapshot.docs[0];
+    //console.log( document0.data(), document0.id ) 
+    // resp.json()
+
+    const documents = productsSnapshot.docs;
+
+    const dataDocs = documents.map(item => {
+        return { id: item.id, ...item.data() }
+    })
+
+    return dataDocs
+}
+
+/**
+ * Obtiene un unico item de firestore
+ * @param { string } idParam - Representa el ID del documento en Firestore
+ * @returns una promesa a resolver con la data del documento de Firestore
+ */
+export async function getProductById(idParam) {
+    const docRef = doc(db, "products", idParam);
+    const docSnapshot = await getDoc(docRef)
+    const docData = docSnapshot.data();
+    docData.id = docSnapshot.id
+
+    return docData;
+}
+
+// ? Esta funcion retorna los productos ordenados segun la categoria
+export async function getProductsByCateg(categParam) {
+    const productsRef = collection(db, "products");
+
+    const queryCategory = query(productsRef, where("category", "==", categParam));
+    const productsSnapshot = await getDocs(queryCategory);
+
+
+    const documents = productsSnapshot.docs;
+    const dataDocs = documents.map(item => {
+        return { id: item.id, ...item.data() }
+    })
+
+    return dataDocs
+}
+
+//  2. Crear una "orden" de compras en firebase
+export async function createOrder(orderData) {
+    const ordersRef = collection(db, "orders");
+    const newDoc = await addDoc(ordersRef, orderData)
+    return newDoc;
+}
+
+
+// 1. "export" mis productos a firebase
+export async function exportProductsData() {
+    const productsRef = collection(db, "products")
+    for (let item of products) {
+        delete item.id;
+        const docCreated = await addDoc(productsRef, item)
+        console.log("Creado el doc", docCreated.id)
+    }
+}
+
+export default app;

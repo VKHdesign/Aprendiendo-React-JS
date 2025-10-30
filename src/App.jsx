@@ -4,7 +4,7 @@ import ItemListContainer from './component/ItemListContainer/ItemListContainer'
 import NavBar from './component/NavBar/NavBar'
 import { BrowserRouter, Routes, Route } from 'react-router';
 import { CartProvider } from './context/cartContext';
-import CartContainer from './components/CartContainer/CartContainer';
+import CartContainer from './component/CartContainer/CartContainer';
 import app, { getProducts } from './data/firebase';
 //cartContext.Provider
 
