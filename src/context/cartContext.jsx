@@ -45,7 +45,6 @@ export function CartProvider(props) {
             newCartItems = cartItems.filter(item => item.id !== idRemove)
         }
 
-
         setCartItems(newCartItems);
     }
 

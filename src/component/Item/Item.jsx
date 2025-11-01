@@ -2,7 +2,6 @@ import { Link } from 'react-router';
 import StateComponent from '../ColorPick/StateComponent';
 import './Item.css'
 
-
 function Item({ id, title, imgURL, price }) {
 
     return (
