@@ -5,7 +5,7 @@ import NavBar from './component/NavBar/NavBar'
 import { BrowserRouter, Routes, Route } from 'react-router';
 import { CartProvider } from './context/cartContext';
 import CartContainer from './component/CartContainer/CartContainer';
-import app, { getProducts } from './data/firebase';
+import app, { getProducts } from './dataa/firebase';
 //cartContext.Provider
 
 export default function App() {
