@@ -12,7 +12,6 @@ export default function App() {
   console.log("Init Firebase", app)
   getProducts();
 
-
   return (
     <CartProvider>
       <BrowserRouter>
