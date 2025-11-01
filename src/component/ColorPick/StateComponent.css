@@ -6,6 +6,10 @@
     border: solid 1px rgba(255, 255, 255, 0.21);
 }
 
+.box-container p {
+    padding-bottom: 10px;
+}
+
 .color-preview {
     margin-left: 10px;
     border-radius: 50%;
@@ -17,6 +21,10 @@
 
 .button-container {
     font-size: 0.75em;
+}
+
+.button-container .button {
+    background-color: gray;
 }
 
 .button {

@@ -46,6 +46,10 @@
     gap: 0.5rem;
 }
 
+.item-card p {
+    padding-bottom: 8px;
+}
+
 .item-card-footer {
     font-size: 11px;
     color: rgba(255, 255, 255, 0.45);
@@ -53,11 +57,12 @@
 }
 
 .item-card button {
-    background-color: var(--b-btn-bg);
+    background-color: rgb(115, 115, 115);
     color: var(--b-btn-txt);
     border: none;
     border-radius: 0.25rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 10px;
 }

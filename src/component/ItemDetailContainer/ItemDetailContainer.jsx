@@ -20,7 +20,13 @@ function ItemDetailContainer() {
         return <p>Cargando...</p>
     }
 
-    return (<div className="item-card">
+    return (<div className="item-card"
+        style={{
+            maxWidth: '400px',
+            margin: '0 auto',
+            padding: '20px',
+            textAlign: 'center'
+        }}>
         <h2 className="item-card-title">{product.title}</h2>
         <img
             className="item-card-img"

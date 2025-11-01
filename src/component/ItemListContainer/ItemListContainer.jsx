@@ -46,7 +46,7 @@ export default function ItemListContainer(props) {
                 : ""
             }
             <div>
-                <h4>Nuestros productos</h4>
+                <h4>Nuestros Productos:</h4>
                 <div className="item-list">
                     {
                         products.map(item => <Item key={item.id} {...item} />)

@@ -29,16 +29,60 @@ function CartContainer() {
     // TODO: renderizado condicional cuando el carrito esté vacío
 
     return (
-        <div>
-            <h3>Tu carrito</h3>
-            <div>
+        <div style={{
+            maxWidth: '400px',
+            margin: '0 auto',
+            padding: '20px',
+            textAlign: 'center'
+        }}>
+            <h3 style={{
+                fontSize: '2rem',
+                marginBottom: '30px',
+                color: '#333'
+            }}>Tu carrito</h3>
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '20px',
+                marginBottom: '30px'
+            }}>
                 {
-                    cartItems.map(item => <div>
-                        <img width="100" src={item.imgURL}></img>
-                        <h4>{item.title}</h4>
-                        <p>Unidades: {item.count}</p>
-                        <p>$ {item.price * item.count}</p>
-                        <button onClick={() => removeItem(item.id)}>Quitar del carrito</button>
+                    cartItems.map(item => <div key={item.id} style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        padding: '20px',
+                        border: '1px solid #ddd',
+                        borderRadius: '8px',
+                        backgroundColor: '#f9f9f9'
+                    }}>
+                        <img width="200" src={item.imgURL} style={{
+                            borderRadius: '8px',
+                            marginBottom: '15px'
+                        }} alt={item.title}></img>
+                        <h4 style={{
+                            margin: '10px 0',
+                            color: '#333'
+                        }}>{item.title}</h4>
+                        <p style={{ margin: '5px 0', color: '#666' }}>
+                            Unidades: {item.count}
+                        </p>
+                        <p style={{
+                            margin: '5px 0',
+                            fontSize: '1.2rem',
+                            fontWeight: 'bold',
+                            color: '#2c5f2d'
+                        }}>$ {item.price * item.count}</p>
+                        <button onClick={() => removeItem(item.id)} style={{
+                            marginTop: '10px',
+                            padding: '10px 20px',
+                            backgroundColor: '#dc3545',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '5px',
+                            cursor: 'pointer',
+                            fontSize: '1rem'
+                        }}>Quitar del carrito</button>
                     </div>
                     )
                 }
@@ -47,5 +91,4 @@ function CartContainer() {
         </div>
     )
 }
-
 export default CartContainer;
