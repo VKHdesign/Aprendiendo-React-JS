@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import cartContext from "../../context/cartContext";
-import { createOrder } from "../../dataa/firebase";
+import { createOrder } from "../../data/firebase";
 import FormCheckout from "./FormCheckout";
 
 function CartContainer() {

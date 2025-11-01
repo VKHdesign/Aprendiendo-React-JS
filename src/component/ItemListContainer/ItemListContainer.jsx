@@ -1,6 +1,6 @@
 
 import Item from '../Item/Item';
-import { getProducts, getProductsByCateg } from '../../dataa/firebase';
+import { getProducts, getProductsByCateg } from '../../data/firebase';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import './ItemListContainer.css';
